@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio de Francis Gedoz - Desarrollador Web Junior">
+    <title>Francis Gedoz | Desarrollador Web Junior</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- NAVEGACIÓN -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="logo">Francis Gedoz</div>
+
+            <!-- Menú hamburguesa para móviles -->
+            <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <!-- Enlaces de navegación -->
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#inicio" class="nav-link">Inicio</a></li>
+                <li><a href="#sobre-mi" class="nav-link">Sobre Mí</a></li>
+                <li><a href="#habilidades" class="nav-link">Habilidades</a></li>
+                <li><a href="#proyectos" class="nav-link">Proyectos</a></li>
+                <li><a href="#contacto" class="nav-link">Contacto</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- SECCIÓN INICIO -->
+    <section id="inicio" class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">
+                Hola, soy <span class="highlight">Francis Gedoz</span>
+            </h1>
+            <p class="hero-subtitle">Desarrollador Web Junior</p>
+            <p class="hero-description">
+                Apasionado por crear experiencias web modernas y funcionales
+            </p>
+            <div class="hero-buttons">
+                <a href="#proyectos" class="btn btn-primary">Ver Proyectos</a>
+                <a href="#contacto" class="btn btn-secondary">Contactar</a>
+            </div>
+        </div>
+
+        <!-- Elemento decorativo animado -->
+        <div class="hero-decoration">
+            <div class="circle circle-1"></div>
+            <div class="circle circle-2"></div>
+            <div class="circle circle-3"></div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN SOBRE MÍ -->
+    <section id="sobre-mi" class="section">
+        <div class="container">
+            <h2 class="section-title">Sobre Mí</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>
+                        Soy un desarrollador web junior con una gran pasión por el aprendizaje continuo
+                        y el desarrollo de soluciones web creativas. Aunque estoy comenzando mi carrera
+                        profesional, cuento con sólidos conocimientos en las tecnologías fundamentales
+                        del desarrollo web.
+                    </p>
+                    <p>
+                        Mi objetivo es crecer como profesional en el mundo del desarrollo web,
+                        contribuyendo con proyectos innovadores y trabajando en equipo para crear
+                        experiencias digitales excepcionales.
+                    </p>
+                    <p>
+                        Estoy constantemente aprendiendo nuevas tecnologías y mejores prácticas
+                        para ofrecer soluciones de calidad. Mi enfoque está en escribir código
+                        limpio, mantenible y eficiente.
+                    </p>
+                </div>
+
+                <!-- Imagen o avatar (puedes reemplazar con una imagen real) -->
+                <div class="about-image">
+                    <div class="profile-placeholder">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" id="kid">
+                            <path fill="#5bcbfa"
+                                d="M52,53v8H12V53a8,8,0,0,1,7-7.94h.04L20,45H44a8.262,8.262,0,0,1,1,.06A8,8,0,0,1,52,53Z">
+                            </path>
+                            <path fill="#ec455a" d="M45,45.06V61H19V45.06h.04L20,45H44A8.262,8.262,0,0,1,45,45.06Z">
+                            </path>
+                            <polygon fill="#fff" points="23 45 25 53 30 49 29 45 23 45"></polygon>
+                            <polygon fill="#fff" points="41 45 39 53 34 49 35 45 41 45"></polygon>
+                            <polygon fill="#ffcbbe" points="38 45 32 51 26 45 27 33 37 33 38 45"></polygon>
+                            <path fill="#3e3d42"
+                                d="M16,18.51V23H48V18.51a1.454,1.454,0,0,1-.32-.63,2.474,2.474,0,0,1,.32-1.4c.38-.85.91-1.74.65-2.38-.43-1.03-2.74-1.06-3.36-1.98s.24-3.08-.55-3.86-2.93.07-3.86-.55-.95-2.93-1.98-3.36-2.67,1.19-3.78.97C34.05,5.11,33.14,2.98,32,2.98s-2.05,2.13-3.12,2.34c-1.11.22-2.76-1.39-3.78-.97s-1.06,2.74-1.98,3.36-3.08-.24-3.86.55.07,2.93-.55,3.86-2.93.95-3.36,1.98c-.26.64.27,1.53.65,2.38a2.474,2.474,0,0,1,.32,1.4A1.454,1.454,0,0,1,16,18.51Z">
+                            </path>
+                            <path fill="#ffcbbe"
+                                d="M17,19h2a0,0,0,0,1,0,0v7a0,0,0,0,1,0,0H17a2,2,0,0,1-2-2V21A2,2,0,0,1,17,19Z"></path>
+                            <path fill="#ffcbbe"
+                                d="M47,19h2a0,0,0,0,1,0,0v7a0,0,0,0,1,0,0H47a2,2,0,0,1-2-2V21A2,2,0,0,1,47,19Z"
+                                transform="rotate(-180 47 22.5)"></path>
+                            <path fill="#ffddce"
+                                d="M32,41h0A13,13,0,0,1,19,28V19a6,6,0,0,1,2.4-4.8h0A6,6,0,0,1,25,13H39a6,6,0,0,1,3.6,1.2h0A6,6,0,0,1,45,19v9A13,13,0,0,1,32,41Z">
+                            </path>
+                            <path fill="#3e3d42"
+                                d="M27 21a1 1 0 0 0-1 1v2a1 1 0 0 0 2 0V22A1 1 0 0 0 27 21zM37 25a1 1 0 0 0 1-1V22a1 1 0 0 0-2 0v2A1 1 0 0 0 37 25z">
+                            </path>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN HABILIDADES -->
+    <section id="habilidades" class="section section-dark">
+        <div class="container">
+            <h2 class="section-title">Habilidades</h2>
+            <div class="skills-grid">
+
+                <!-- Tarjeta de habilidad: HTML -->
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                            <polygon points="20,10 30,80 50,90 70,80 80,10" fill="#1dd1a1" />
+                            <polygon points="50,25 65,25 63,60 50,65 37,60 35,25" fill="#2d3436" />
+                        </svg>
+                    </div>
+                    <h3>HTML5</h3>
+                    <p>Estructura semántica y accesible para aplicaciones web modernas.</p>
+                    <!-- Barra de progreso -->
+                    <div class="progress-bar">
+                        <div class="progress-fill" data-progress="75"></div>
+                    </div>
+                </div>
+
+                <!-- Tarjeta de habilidad: CSS -->
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="20" y="20" width="60" height="60" rx="5" fill="#1dd1a1" />
+                            <path d="M 35 40 L 50 50 L 35 60 M 55 40 L 65 40" stroke="#2d3436" stroke-width="3"
+                                fill="none" />
+                        </svg>
+                    </div>
+                    <h3>CSS3</h3>
+                    <p>Diseño responsivo, animaciones y estilos modernos con CSS puro.</p>
+                    <div class="progress-bar">
+                        <div class="progress-fill" data-progress="70"></div>
+                    </div>
+                </div>
+
+                <!-- Tarjeta de habilidad: JavaScript -->
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="20" y="20" width="60" height="60" rx="5" fill="#1dd1a1" />
+                            <text x="50" y="65" font-size="40" text-anchor="middle" fill="#2d3436"
+                                font-weight="bold">JS</text>
+                        </svg>
+                    </div>
+                    <h3>JavaScript</h3>
+                    <p>Programación dinámica e interactiva con JavaScript vanilla.</p>
+                    <div class="progress-bar">
+                        <div class="progress-fill" data-progress="65"></div>
+                    </div>
+                </div>
+
+                <!-- Tarjeta de habilidad: Responsive Design -->
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="15" y="25" width="35" height="50" rx="3" fill="#1dd1a1" />
+                            <rect x="55" y="20" width="30" height="60" rx="3" fill="#1dd1a1" opacity="0.7" />
+                        </svg>
+                    </div>
+                    <h3>Diseño Responsivo</h3>
+                    <p>Sitios web adaptables a cualquier dispositivo y tamaño de pantalla.</p>
+                    <div class="progress-bar">
+                        <div class="progress-fill" data-progress="70"></div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN PROYECTOS -->
+    <section id="proyectos" class="section">
+        <div class="container">
+            <h2 class="section-title">Proyectos</h2>
+            <p class="section-subtitle">Aquí encontrarás algunos de mis trabajos más recientes</p>
+
+            <div class="projects-grid">
+
+                <!-- PROYECTO 1  -->
+                <!-- 
+                    Para reemplazar este proyecto:
+                    1. Cambiar el href del <a> por la URL real del proyecto
+                    2. Cambiar el <h3> por el nombre real del proyecto
+                    3. Cambiar el <p> por la descripción real del proyecto
+                    4. Opcional: actualizar las tecnologías en las etiquetas
+                -->
+                <article class="project-card">
+                    <div class="project-image">
+                        <div class="project-placeholder">
+                            <svg viewBox="0 0 200 150" xmlns="http://www.w3.org/2000/svg">
+                                <rect width="200" height="150" fill="#2d3436" />
+                                <circle cx="100" cy="75" r="30" fill="#1dd1a1" />
+                                <path d="M 85 75 L 95 85 L 115 65" stroke="#2d3436" stroke-width="4" fill="none" />
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Sitio Web Corporativo</h3>
+                        <p>Landing page moderna y responsiva para una empresa de tecnología.</p>
+                        <div class="project-tags">
+                            <span class="tag">HTML</span>
+                            <span class="tag">CSS</span>
+                            <span class="tag">JavaScript</span>
+                        </div>
+                        <a href="#" class="project-link" target="_blank" rel="noopener">
+                            Ver Proyecto →
+                        </a>
+                    </div>
+                </article>
+
+                <!-- PROYECTO 2 -->
+                <!-- 
+                    Para reemplazar este proyecto:
+                    1. Cambiar el href del <a> por la URL real del proyecto
+                    2. Cambiar el <h3> por el nombre real del proyecto
+                    3. Cambiar el <p> por la descripción real del proyecto
+                    4. Opcional: actualizar las tecnologías en las etiquetas
+                -->
+                <article class="project-card">
+                    <div class="project-image">
+                        <div class="project-placeholder">
+                            <svg viewBox="0 0 200 150" xmlns="http://www.w3.org/2000/svg">
+                                <rect width="200" height="150" fill="#2d3436" />
+                                <rect x="60" y="40" width="80" height="70" rx="5" fill="#1dd1a1" />
+                                <circle cx="100" cy="75" r="15" fill="#2d3436" />
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Aplicación de Tareas</h3>
+                        <p>Sistema interactivo para gestionar tareas diarias con almacenamiento local.</p>
+                        <div class="project-tags">
+                            <span class="tag">HTML</span>
+                            <span class="tag">CSS</span>
+                            <span class="tag">JavaScript</span>
+                        </div>
+                        <a href="#" class="project-link" target="_blank" rel="noopener">
+                            Ver Proyecto →
+                        </a>
+                    </div>
+                </article>
+
+                <!-- PROYECTO 3 -->
+                <!-- 
+                    Para reemplazar este proyecto:
+                    1. Cambiar el href del <a> por la URL real del proyecto
+                    2. Cambiar el <h3> por el nombre real del proyecto
+                    3. Cambiar el <p> por la descripción real del proyecto
+                    4. Opcional: actualizar las tecnologías en las etiquetas
+                -->
+                <article class="project-card">
+                    <div class="project-image">
+                        <div class="project-placeholder">
+                            <svg viewBox="0 0 200 150" xmlns="http://www.w3.org/2000/svg">
+                                <rect width="200" height="150" fill="#2d3436" />
+                                <path d="M 50 100 Q 100 50 150 100" stroke="#1dd1a1" stroke-width="4" fill="none" />
+                                <circle cx="50" cy="100" r="5" fill="#1dd1a1" />
+                                <circle cx="100" cy="75" r="5" fill="#1dd1a1" />
+                                <circle cx="150" cy="100" r="5" fill="#1dd1a1" />
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Portfolio Interactivo</h3>
+                        <p>Sitio web personal con animaciones y efectos visuales atractivos.</p>
+                        <div class="project-tags">
+                            <span class="tag">HTML</span>
+                            <span class="tag">CSS</span>
+                            <span class="tag">JavaScript</span>
+                        </div>
+                        <a href="#" class="project-link" target="_blank" rel="noopener">
+                            Ver Proyecto →
+                        </a>
+                    </div>
+                </article>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN CONTACTO -->
+    <section id="contacto" class="section section-dark">
+        <div class="container">
+            <h2 class="section-title">Contacto</h2>
+            <p class="section-subtitle">¿Tienes un proyecto en mente? ¡Hablemos!</p>
+
+            <div class="contact-grid">
+
+                <!-- Botón Email -->
+                <a href="mailto:francisgedozgithub@proton.me" class="contact-btn">
+                    <div class="contact-icon">
+                        <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="10" y="25" width="80" height="50" rx="5" fill="none" stroke="currentColor"
+                                stroke-width="3" />
+                            <path d="M 10 25 L 50 55 L 90 25" stroke="currentColor" stroke-width="3" fill="none" />
+                        </svg>
+                    </div>
+                    <span>Email</span>
+                </a>
+
+                <!-- Botón GitHub -->
+                <a href="https://github.com/FranGed2026" target="_blank" rel="noopener" class="contact-btn">
+                    <div class="contact-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100"
+                            viewBox="0 0 50 50">
+                            <path
+                                d="M17.791,46.836C18.502,46.53,19,45.823,19,45v-5.4c0-0.197,0.016-0.402,0.041-0.61C19.027,38.994,19.014,38.997,19,39 c0,0-3,0-3.6,0c-1.5,0-2.8-0.6-3.4-1.8c-0.7-1.3-1-3.5-2.8-4.7C8.9,32.3,9.1,32,9.7,32c0.6,0.1,1.9,0.9,2.7,2c0.9,1.1,1.8,2,3.4,2 c2.487,0,3.82-0.125,4.622-0.555C21.356,34.056,22.649,33,24,33v-0.025c-5.668-0.182-9.289-2.066-10.975-4.975 c-3.665,0.042-6.856,0.405-8.677,0.707c-0.058-0.327-0.108-0.656-0.151-0.987c1.797-0.296,4.843-0.647,8.345-0.714 c-0.112-0.276-0.209-0.559-0.291-0.849c-3.511-0.178-6.541-0.039-8.187,0.097c-0.02-0.332-0.047-0.663-0.051-0.999 c1.649-0.135,4.597-0.27,8.018-0.111c-0.079-0.5-0.13-1.011-0.13-1.543c0-1.7,0.6-3.5,1.7-5c-0.5-1.7-1.2-5.3,0.2-6.6 c2.7,0,4.6,1.3,5.5,2.1C21,13.4,22.9,13,25,13s4,0.4,5.6,1.1c0.9-0.8,2.8-2.1,5.5-2.1c1.5,1.4,0.7,5,0.2,6.6c1.1,1.5,1.7,3.2,1.6,5 c0,0.484-0.045,0.951-0.11,1.409c3.499-0.172,6.527-0.034,8.204,0.102c-0.002,0.337-0.033,0.666-0.051,0.999 c-1.671-0.138-4.775-0.28-8.359-0.089c-0.089,0.336-0.197,0.663-0.325,0.98c3.546,0.046,6.665,0.389,8.548,0.689 c-0.043,0.332-0.093,0.661-0.151,0.987c-1.912-0.306-5.171-0.664-8.879-0.682C35.112,30.873,31.557,32.75,26,32.969V33 c2.6,0,5,3.9,5,6.6V45c0,0.823,0.498,1.53,1.209,1.836C41.37,43.804,48,35.164,48,25C48,12.318,37.683,2,25,2S2,12.318,2,25 C2,35.164,8.63,43.804,17.791,46.836z">
+                            </path>
+                        </svg>
+                    </div>
+                    <span>GitHub</span>
+                </a>
+
+                <!-- Botón LinkedIn -->
+                <a href="https://www.linkedin.com/in/francis-luis-gedoz-2b032150" target="_blank" rel="noopener"
+                    class="contact-btn">
+                    <div class="contact-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100"
+                            viewBox="0 0 48 48">
+                            <path fill="#0288D1"
+                                d="M42,37c0,2.762-2.238,5-5,5H11c-2.761,0-5-2.238-5-5V11c0-2.762,2.239-5,5-5h26c2.762,0,5,2.238,5,5V37z">
+                            </path>
+                            <path fill="#FFF"
+                                d="M12 19H17V36H12zM14.485 17h-.028C12.965 17 12 15.888 12 14.499 12 13.08 12.995 12 14.514 12c1.521 0 2.458 1.08 2.486 2.499C17 15.887 16.035 17 14.485 17zM36 36h-5v-9.099c0-2.198-1.225-3.698-3.192-3.698-1.501 0-2.313 1.012-2.707 1.99C24.957 25.543 25 26.511 25 27v9h-5V19h5v2.616C25.721 20.5 26.85 19 29.738 19c3.578 0 6.261 2.25 6.261 7.274L36 36 36 36z">
+                            </path>
+                        </svg>
+                    </div>
+                    <span>LinkedIn</span>
+                </a>
+
+                <!-- Botón WhatsApp -->
+                <a href="https://wa.me/56958414841" target="_blank" rel="noopener" class="contact-btn">
+                    <div class="contact-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100"
+                            viewBox="0 0 48 48">
+                            <path fill="#fff"
+                                d="M4.868,43.303l2.694-9.835C5.9,30.59,5.026,27.324,5.027,23.979C5.032,13.514,13.548,5,24.014,5c5.079,0.002,9.845,1.979,13.43,5.566c3.584,3.588,5.558,8.356,5.556,13.428c-0.004,10.465-8.522,18.98-18.986,18.98c-0.001,0,0,0,0,0h-0.008c-3.177-0.001-6.3-0.798-9.073-2.311L4.868,43.303z">
+                            </path>
+                            <path fill="#fff"
+                                d="M4.868,43.803c-0.132,0-0.26-0.052-0.355-0.148c-0.125-0.127-0.174-0.312-0.127-0.483l2.639-9.636c-1.636-2.906-2.499-6.206-2.497-9.556C4.532,13.238,13.273,4.5,24.014,4.5c5.21,0.002,10.105,2.031,13.784,5.713c3.679,3.683,5.704,8.577,5.702,13.781c-0.004,10.741-8.746,19.48-19.486,19.48c-3.189-0.001-6.344-0.788-9.144-2.277l-9.875,2.589C4.953,43.798,4.911,43.803,4.868,43.803z">
+                            </path>
+                            <path fill="#cfd8dc"
+                                d="M24.014,5c5.079,0.002,9.845,1.979,13.43,5.566c3.584,3.588,5.558,8.356,5.556,13.428c-0.004,10.465-8.522,18.98-18.986,18.98h-0.008c-3.177-0.001-6.3-0.798-9.073-2.311L4.868,43.303l2.694-9.835C5.9,30.59,5.026,27.324,5.027,23.979C5.032,13.514,13.548,5,24.014,5 M24.014,42.974C24.014,42.974,24.014,42.974,24.014,42.974C24.014,42.974,24.014,42.974,24.014,42.974 M24.014,42.974C24.014,42.974,24.014,42.974,24.014,42.974C24.014,42.974,24.014,42.974,24.014,42.974 M24.014,4C24.014,4,24.014,4,24.014,4C12.998,4,4.032,12.962,4.027,23.979c-0.001,3.367,0.849,6.685,2.461,9.622l-2.585,9.439c-0.094,0.345,0.002,0.713,0.254,0.967c0.19,0.192,0.447,0.297,0.711,0.297c0.085,0,0.17-0.011,0.254-0.033l9.687-2.54c2.828,1.468,5.998,2.243,9.197,2.244c11.024,0,19.99-8.963,19.995-19.98c0.002-5.339-2.075-10.359-5.848-14.135C34.378,6.083,29.357,4.002,24.014,4L24.014,4z">
+                            </path>
+                            <path fill="#40c351"
+                                d="M35.176,12.832c-2.98-2.982-6.941-4.625-11.157-4.626c-8.704,0-15.783,7.076-15.787,15.774c-0.001,2.981,0.833,5.883,2.413,8.396l0.376,0.597l-1.595,5.821l5.973-1.566l0.577,0.342c2.422,1.438,5.2,2.198,8.032,2.199h0.006c8.698,0,15.777-7.077,15.78-15.776C39.795,19.778,38.156,15.814,35.176,12.832z">
+                            </path>
+                            <path fill="#fff" fill-rule="evenodd"
+                                d="M19.268,16.045c-0.355-0.79-0.729-0.806-1.068-0.82c-0.277-0.012-0.593-0.011-0.909-0.011c-0.316,0-0.83,0.119-1.265,0.594c-0.435,0.475-1.661,1.622-1.661,3.956c0,2.334,1.7,4.59,1.937,4.906c0.237,0.316,3.282,5.259,8.104,7.161c4.007,1.58,4.823,1.266,5.693,1.187c0.87-0.079,2.807-1.147,3.202-2.255c0.395-1.108,0.395-2.057,0.277-2.255c-0.119-0.198-0.435-0.316-0.909-0.554s-2.807-1.385-3.242-1.543c-0.435-0.158-0.751-0.237-1.068,0.238c-0.316,0.474-1.225,1.543-1.502,1.859c-0.277,0.317-0.554,0.357-1.028,0.119c-0.474-0.238-2.002-0.738-3.815-2.354c-1.41-1.257-2.362-2.81-2.639-3.285c-0.277-0.474-0.03-0.731,0.208-0.968c0.213-0.213,0.474-0.554,0.712-0.831c0.237-0.277,0.316-0.475,0.474-0.791c0.158-0.317,0.079-0.594-0.04-0.831C20.612,19.329,19.69,16.983,19.268,16.045z"
+                                clip-rule="evenodd"></path>
+                        </svg>
+                    </div>
+                    <span>WhatsApp</span>
+                </a>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Francis Gedoz. Todos los derechos reservados.</p>
+            <p>Desarrollado con HTML, CSS y JavaScript</p>
+        </div>
+    </footer>
+
+    <!-- Botón scroll to top -->
+    <button class="scroll-top" id="scrollTop" aria-label="Volver arriba">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M 12 4 L 6 10 L 7.5 11.5 L 12 7 L 16.5 11.5 L 18 10 Z" fill="currentColor" />
+            <path d="M 12 10 L 6 16 L 7.5 17.5 L 12 13 L 16.5 17.5 L 18 16 Z" fill="currentColor" />
+        </svg>
+    </button>
+
+    <!-- Enlace al archivo JavaScript -->
+    <script src="script.js"></script>
+</body>
+
+</html>

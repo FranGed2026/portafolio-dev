@@ -1,0 +1,869 @@
+/* ==========================================
+   RESET Y ESTILOS BASE
+   ========================================== */
+
+/* Reseteo de márgenes y paddings */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Variables CSS para colores principales */
+:root {
+    --color-primary: #1dd1a1;        /* Turquesa principal */
+    --color-primary-dark: #10ac84;   /* Turquesa oscuro para hover */
+    --color-dark: #2d3436;           /* Gris oscuro */
+    --color-dark-light: #636e72;     /* Gris medio */
+    --color-light: #dfe6e9;          /* Gris claro */
+    --color-lighter: #f5f6fa;        /* Gris muy claro */
+    --color-white: #ffffff;          /* Blanco */
+    --transition: all 0.3s ease;     /* Transición suave */
+    --shadow: 0 10px 30px rgba(0, 0, 0, 0.1);  /* Sombra suave */
+    --shadow-hover: 0 15px 40px rgba(29, 209, 161, 0.3);  /* Sombra con color */
+}
+
+/* Estilos del body */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: var(--color-dark);
+    background-color: var(--color-lighter);
+    overflow-x: hidden; /* Evita scroll horizontal */
+}
+
+/* Scroll suave en toda la página */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Contenedor general para centrar contenido */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Estilos para secciones */
+.section {
+    padding: 80px 0;
+    position: relative;
+}
+
+/* Sección oscura alternada */
+.section-dark {
+    background-color: var(--color-dark);
+    color: var(--color-white);
+}
+
+/* Títulos de sección */
+.section-title {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 1rem;
+    color: var(--color-primary);
+    position: relative;
+    display: inline-block;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* Línea decorativa bajo el título */
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background: linear-gradient(90deg, transparent, var(--color-primary), transparent);
+    border-radius: 2px;
+}
+
+/* Subtítulo de sección */
+.section-subtitle {
+    text-align: center;
+    font-size: 1.1rem;
+    color: var(--color-dark-light);
+    margin-bottom: 3rem;
+}
+
+.section-dark .section-subtitle {
+    color: var(--color-light);
+}
+
+
+/* ==========================================
+   BARRA DE NAVEGACIÓN
+   ========================================== */
+
+.navbar {
+    background-color: var(--color-dark);
+    padding: 1rem 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+}
+
+/* Navbar con scroll (agrega clase via JS) */
+.navbar.scrolled {
+    padding: 0.5rem 0;
+    background-color: rgba(45, 52, 54, 0.95);
+    backdrop-filter: blur(10px);
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Logo */
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--color-primary);
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.logo:hover {
+    transform: scale(1.05);
+}
+
+/* Menú de navegación */
+.nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+/* Enlaces del menú */
+.nav-link {
+    color: var(--color-white);
+    text-decoration: none;
+    font-weight: 500;
+    position: relative;
+    transition: var(--transition);
+    padding: 0.5rem 0;
+}
+
+/* Efecto hover en enlaces */
+.nav-link:hover {
+    color: var(--color-primary);
+}
+
+/* Línea animada bajo el enlace */
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--color-primary);
+    transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+/* Botón hamburguesa (móvil) */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem;
+}
+
+.menu-toggle span {
+    width: 25px;
+    height: 3px;
+    background-color: var(--color-white);
+    margin: 3px 0;
+    transition: var(--transition);
+    border-radius: 3px;
+}
+
+/* Animación del botón hamburguesa cuando está activo */
+.menu-toggle.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.menu-toggle.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-toggle.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -6px);
+}
+
+
+/* ==========================================
+   SECCIÓN HERO (INICIO)
+   ========================================== */
+
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, var(--color-dark) 0%, #1e272e 100%);
+    color: var(--color-white);
+    position: relative;
+    overflow: hidden;
+    padding-top: 80px;
+}
+
+/* Contenido del hero */
+.hero-content {
+    text-align: center;
+    z-index: 2;
+    position: relative;
+    animation: fadeInUp 1s ease;
+}
+
+/* Título principal */
+.hero-title {
+    font-size: 5rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+/* Texto destacado */
+.highlight {
+    color: var(--color-primary);
+    position: relative;
+    display: inline-block;
+}
+
+/* Subtítulo hero */
+.hero-subtitle {
+    font-size: 1.5rem;
+    color: var(--color-light);
+    margin-bottom: 1rem;
+    animation: fadeInUp 1s ease 0.2s backwards;
+}
+
+/* Descripción hero */
+.hero-description {
+    font-size: 1.1rem;
+    color: var(--color-dark-light);
+    margin-bottom: 2rem;
+    animation: fadeInUp 1s ease 0.4s backwards;
+}
+
+/* Contenedor de botones */
+.hero-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    animation: fadeInUp 1s ease 0.6s backwards;
+}
+
+/* Estilos generales de botones */
+.btn {
+    padding: 1rem 2rem;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: 600;
+    transition: var(--transition);
+    display: inline-block;
+    cursor: pointer;
+    border: 2px solid transparent;
+}
+
+/* Botón primario */
+.btn-primary {
+    background-color: var(--color-primary);
+    color: var(--color-dark);
+}
+
+.btn-primary:hover {
+    background-color: var(--color-primary-dark);
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-hover);
+}
+
+/* Botón secundario */
+.btn-secondary {
+    background-color: transparent;
+    color: var(--color-white);
+    border-color: var(--color-primary);
+}
+
+.btn-secondary:hover {
+    background-color: var(--color-primary);
+    color: var(--color-dark);
+    transform: translateY(-3px);
+}
+
+/* Decoración animada del hero */
+.hero-decoration {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    overflow: hidden;
+}
+
+/* Círculos decorativos animados */
+.circle {
+    position: absolute;
+    border-radius: 50%;
+    background: radial-gradient(circle, var(--color-primary), transparent);
+    opacity: 0.1;
+    animation: float 15s infinite ease-in-out;
+}
+
+.circle-1 {
+    width: 300px;
+    height: 300px;
+    top: 10%;
+    left: 10%;
+    animation-delay: 0s;
+}
+
+.circle-2 {
+    width: 200px;
+    height: 200px;
+    top: 50%;
+    right: 15%;
+    animation-delay: 2s;
+}
+
+.circle-3 {
+    width: 250px;
+    height: 250px;
+    bottom: 10%;
+    left: 50%;
+    animation-delay: 4s;
+}
+
+
+/* ==========================================
+   SECCIÓN SOBRE MÍ
+   ========================================== */
+
+.about-content {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 3rem;
+    align-items: center;
+}
+
+.about-text p {
+    margin-bottom: 1.5rem;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: var(--color-dark-light);
+    margin-top: 40px;
+}
+
+/* Imagen de perfil placeholder */
+.about-image {
+    display: flex;
+    justify-content: center;
+}
+
+.profile-placeholder {
+    width: 250px;
+    height: 250px;
+    background: linear-gradient(135deg, var(--color-primary), var(--color-primary-dark));
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+    animation: fadeIn 1s ease;
+}
+
+.profile-placeholder:hover {
+    transform: scale(1.05) rotate(5deg);
+    box-shadow: var(--shadow-hover);
+}
+
+.profile-placeholder svg {
+    width: 150px;
+    height: 150px;
+}
+
+
+/* ==========================================
+   SECCIÓN HABILIDADES
+   ========================================== */
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 40px;
+}
+
+/* Tarjeta de habilidad */
+.skill-card {
+    background-color: var(--color-lighter);
+    padding: 2rem;
+    border-radius: 15px;
+    text-align: center;
+    transition: var(--transition);
+    box-shadow: var(--shadow);
+}
+
+.skill-card:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--shadow-hover);
+}
+
+/* Icono de habilidad */
+.skill-icon {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 1.5rem;
+    transition: var(--transition);
+}
+
+.skill-card:hover .skill-icon {
+    transform: scale(1.1) rotate(5deg);
+}
+
+.skill-icon svg {
+    width: 100%;
+    height: 100%;
+}
+
+.skill-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: var(--color-dark);
+}
+
+.skill-card p {
+    color: var(--color-dark-light);
+    margin-bottom: 1.5rem;
+    font-size: 0.95rem;
+}
+
+/* Barra de progreso */
+.progress-bar {
+    background-color: var(--color-light);
+    height: 8px;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-top: 1rem;
+}
+
+/* Relleno de la barra de progreso */
+.progress-fill {
+    height: 100%;
+    background: linear-gradient(90deg, var(--color-primary), var(--color-primary-dark));
+    border-radius: 10px;
+    width: 0;
+    transition: width 1.5s ease;
+}
+
+/* Clase que se agrega con JavaScript cuando la sección es visible */
+.progress-fill.animate {
+    width: var(--progress-width);
+}
+
+
+/* ==========================================
+   SECCIÓN PROYECTOS
+   ========================================== */
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+/* Tarjeta de proyecto */
+.project-card {
+    background-color: var(--color-white);
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--shadow-hover);
+}
+
+/* Imagen del proyecto */
+.project-image {
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+    background-color: var(--color-light);
+}
+
+.project-placeholder {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: var(--transition);
+}
+
+.project-card:hover .project-placeholder {
+    transform: scale(1.1);
+}
+
+.project-placeholder svg {
+    width: 100%;
+    height: 100%;
+}
+
+/* Contenido del proyecto */
+.project-content {
+    padding: 1.5rem;
+}
+
+.project-content h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: var(--color-dark);
+}
+
+.project-content p {
+    color: var(--color-dark-light);
+    margin-bottom: 1rem;
+    line-height: 1.6;
+}
+
+/* Etiquetas de tecnologías */
+.project-tags {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    margin-bottom: 1rem;
+}
+
+.tag {
+    background-color: var(--color-primary);
+    color: var(--color-dark);
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+/* Enlace del proyecto */
+.project-link {
+    color: var(--color-primary);
+    text-decoration: none;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    transition: var(--transition);
+}
+
+.project-link:hover {
+    color: var(--color-primary-dark);
+    transform: translateX(5px);
+}
+
+
+/* ==========================================
+   SECCIÓN CONTACTO
+   ========================================== */
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+/* Botón de contacto */
+.contact-btn {
+    background-color: var(--color-lighter);
+    padding: 2rem;
+    border-radius: 15px;
+    text-align: center;
+    text-decoration: none;
+    color: var(--color-dark);
+    transition: var(--transition);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    box-shadow: var(--shadow);
+    cursor: pointer;
+}
+
+.contact-btn:hover {
+    background-color: var(--color-primary);
+    transform: translateY(-10px);
+    box-shadow: var(--shadow-hover);
+}
+
+/* Icono de contacto */
+.contact-icon {
+    width: 60px;
+    height: 60px;
+    color: var(--color-primary);
+    transition: var(--transition);
+}
+
+.contact-btn:hover .contact-icon {
+    color: var(--color-dark);
+    transform: scale(1.1) rotate(5deg);
+}
+
+.contact-icon svg {
+    width: 100%;
+    height: 100%;
+}
+
+.contact-btn span {
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+
+/* ==========================================
+   FOOTER
+   ========================================== */
+
+.footer {
+    background-color: var(--color-dark);
+    color: var(--color-light);
+    padding: 2rem 0;
+    text-align: center;
+}
+
+.footer p {
+    margin: 0.5rem 0;
+}
+
+
+/* ==========================================
+   BOTÓN SCROLL TO TOP
+   ========================================== */
+
+.scroll-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 50px;
+    height: 50px;
+    background-color: var(--color-primary);
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+    opacity: 0;
+    visibility: hidden;
+    z-index: 999;
+}
+
+/* Botón visible cuando se hace scroll */
+.scroll-top.visible {
+    opacity: 1;
+    visibility: visible;
+}
+
+.scroll-top:hover {
+    background-color: var(--color-primary-dark);
+    transform: translateY(-5px);
+}
+
+.scroll-top svg {
+    width: 24px;
+    height: 24px;
+    fill: var(--color-dark);
+}
+
+
+/* ==========================================
+   ANIMACIONES
+   ========================================== */
+
+/* Animación de aparición desde abajo */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Animación de aparición simple */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Animación flotante */
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0) scale(1);
+    }
+    50% {
+        transform: translateY(-30px) scale(1.1);
+    }
+}
+
+
+/* ==========================================
+   RESPONSIVE DESIGN - TABLETS
+   ========================================== */
+
+@media (max-width: 768px) {
+    
+    /* Navegación móvil */
+    .menu-toggle {
+        display: flex;
+    }
+    
+    .nav-menu {
+        position: fixed;
+        left: -100%;
+        top: 70px;
+        flex-direction: column;
+        background-color: var(--color-dark);
+        width: 100%;
+        text-align: center;
+        transition: 0.3s;
+        box-shadow: var(--shadow);
+        padding: 2rem 0;
+        gap: 0;
+    }
+    
+    .nav-menu.active {
+        left: 0;
+    }
+    
+    .nav-menu li {
+        padding: 1rem 0;
+    }
+    
+    /* Hero */
+    .hero-title {
+        font-size: 2rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 1.2rem;
+    }
+    
+    /* Sobre mí */
+    .about-content {
+        grid-template-columns: 1fr;
+    }
+    
+    .about-image {
+        order: -1;
+    }
+    
+    /* Secciones */
+    .section {
+        padding: 60px 0;
+    }
+    
+    .section-title {
+        font-size: 2rem;
+    }
+    
+}
+
+
+/* ==========================================
+   RESPONSIVE DESIGN - MÓVILES
+   ========================================== */
+
+@media (max-width: 480px) {
+    
+    /* Hero */
+    .hero-title {
+        font-size: 1.8rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 1.1rem;
+    }
+    
+    .hero-description {
+        font-size: 1rem;
+    }
+    
+    .hero-buttons {
+        flex-direction: column;
+        gap: 0.8rem;
+    }
+    
+    .btn {
+        width: 100%;
+        max-width: 300px;
+    }
+    
+    /* Perfil */
+    .profile-placeholder {
+        width: 200px;
+        height: 200px;
+    }
+    
+    /* Skills */
+    .skills-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    /* Proyectos */
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    /* Contacto */
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    /* Secciones */
+    .section {
+        padding: 40px 0;
+    }
+    
+    .section-title {
+        font-size: 1.8rem;
+    }
+    
+    /* Scroll top button */
+    .scroll-top {
+        bottom: 20px;
+        right: 20px;
+        width: 45px;
+        height: 45px;
+    }
+    
+}
